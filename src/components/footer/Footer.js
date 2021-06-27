@@ -34,16 +34,12 @@ const SocialButton = ({
   children,
   label,
   href,
-}: {
-  children: ReactNode;
-  label: string;
-  href: string;
 }) => {
   return (
     <chakra.button
       bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
       rounded={'full'}
-      w={8}
+      w={9}
       h={8}
       cursor={'pointer'}
       as={'a'}
