@@ -21,42 +21,31 @@ const Music = () => {
     2,
     3,
     4,
-    3,
-    3,
-    4,
-    3,
-    3,
-    33,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    33,
-    3,
-    33,
-    3,
-    3,
-    3,
-    33,
-    3,
-    3
+    9,
+    10,
+    11,
+    12,
+    34,
+    39,
+    47,
+    80,
+    83,
+    40,
+   
   ]
   return (
     // Grid layout for the Music showcase
 
     <SimpleGrid
-      columns={[1, null, 4]}
-      spacing={{ base: '50px', md: '40px', lg: '35px' }}
+      columns={[1, 2,3,4]}
+      spacing={{ base: '70px',sm:'14px', md: '12px', lg: '35px' }}
       mt='12'
-      maxW={{ base: '85%', md: '90%', lg: '95%' }}
+      maxW={{ base: '85%',sm:"96%", md: '95%', lg: '95%' }}
       mx='auto'
     >
       {/* Each Box is a music song card containing the name of the song, author ,play and download option */}
 {/* Arrays of music folders here */}
       {dummyArrayForMusicLayout.map(musicBox => (
-
         <Box   key={musicBox}>
      <MusicBox image={ImageOne}  />
       </Box>
