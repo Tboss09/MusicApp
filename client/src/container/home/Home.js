@@ -56,12 +56,12 @@ const Component = () => {
       <Flex
         w='full'
         bg={useColorModeValue('gray.200', 'gray.600')}
-        p={10}
+        p={0}
         alignItems='center'
         justifyContent='center'
       >
         <Flex w='full' overflow='hidden'>
-          <Flex pos='relative' h='300px' w='full' {...carouselStyle}>
+          <Flex pos='relative' h='400px' w='full' {...carouselStyle}>
             {slides.map((slide, sid) => (
               <Box key={`slide-${sid}`} flex='none' boxSize='full' shadow='md'>
                 <Text
@@ -72,7 +72,7 @@ const Component = () => {
                   top='0'
                   whiteSpace='nowrap'
                 >
-                  {sid + 1} / {slidesCount}
+                  
                 </Text>
                 <Image src={slide.img} boxSize='full' backgroundSize='cover' />
               </Box>
@@ -113,7 +113,7 @@ const Component = () => {
             mb={4}
             fontSize={{ base: '4xl', md: '4xl', lg: '5xl' }}
             fontWeight='bold'
-            color={useColorModeValue('brand.600', 'gray.300')}
+            color={useColorModeValue('brand.600','dark.blue')}
             lineHeight='shorter'
             textShadow='2px 0 currentcolor'
           >
@@ -142,7 +142,7 @@ const Component = () => {
               fontWeight='bold'
               w='full'
               rounded='md'
-              color={useColorModeValue('white')}
+              color={useColorModeValue('dark.blue')}
               bg={useColorModeValue('brand.600', 'brand.500')}
               _hover={{
                 bg: useColorModeValue('brand.700', 'brand.600')

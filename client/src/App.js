@@ -3,7 +3,9 @@ import React from 'react'
 import 'tachyons'
 import Home from './container/home/Home'
 import Music from './container/Music/Music'
-import Nav from './components/navigation/Nav'
+import Contact from './container/contact/Contact'
+import Nav from './components/navigation/Nav' 
+import Footer from './components/footer/Footer' 
 import { BrowserRouter as Router,Route,Switch,  Link
 } from 'react-router-dom'
 
@@ -21,11 +23,12 @@ const App = () => {
       <Music/>
       </Route>
 
-      <Route exact path ="/about">
-      <Home/>
+      <Route exact path ="/contact">
+      <Contact/>
       </Route>
-</Switch>
 
+</Switch>
+<Footer/>
       </Router>
   )
 }

@@ -1,3 +1,8 @@
 .slick-dots{
     bottom: 16px !important;
 }
+
+.HoverCardClass_Card__IrMgs{
+    box-shadow: 0px 0px 0px 0px !important;
+margin:0px;
+    }
