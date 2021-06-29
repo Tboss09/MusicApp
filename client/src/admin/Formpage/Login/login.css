@@ -1,0 +1,17 @@
+.login{
+    height: 89vh;
+    margin-top: 72px !important;
+}
+.box.login{
+    width: 100%;
+    display:grid;
+    justify-content: center;
+    align-content: center;
+}
+.w-25-l {
+    width: 100%;
+}
+.article{
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+}

@@ -1,40 +1,57 @@
 import React from 'react'
-// import { Box } from "@chakra-ui/react";
 import 'tachyons'
 import Home from './container/home/Home'
 import Music from './container/Music/Music'
 import Contact from './container/contact/Contact'
 import About from './container/about/About'
-import Nav from './components/navigation/Nav' 
-import Footer from './components/footer/Footer' 
-import { BrowserRouter as Router,Route,Switch,  Link
-} from 'react-router-dom'
+import Nav from './components/navigation/Nav'
+import Footer from './components/footer/Footer'
+import { Route, Switch, useLocation } from 'react-router-dom'
+import Admin from './admin/Admin'
+import Dashboard from './admin/Dashboard'
 
 const App = () => {
-  return( 
-      <Router>
-< Nav />
+  const location = useLocation().pathname
+  const [changeNav, setChangeNav] = React.useState(false)
 
-    <Switch>  
-      <Route exact path ="/">
-      <Home/>
-      </Route>
+  React.useEffect(() => {
+    location === '/admin' || location === '/dashboard' ? setChangeNav(true) : setChangeNav(false)
+  }, [location])
 
-      <Route exact path ="/music">
-      <Music/>
-      </Route>
+  return (
+    <>
+      {!changeNav && <Nav /> }
+      
 
-      <Route exact path ="/contact">
-      <Contact/>
-      </Route>
+      <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
 
-      <Route exact path ="/about">
-      <About/>
-      </Route>
+        <Route exact path='/music'>
+          <Music />
+        </Route>
 
-</Switch>
-<Footer/>
-      </Router>
+        <Route exact path='/contact'>
+          <Contact />
+        </Route>
+
+        <Route exact path='/about'>
+          <About />
+        </Route>
+
+        <Route exact path='/admin'>
+          <Admin />
+        </Route>
+
+        <Route exact path='/dashboard'>
+          <Dashboard />
+        </Route>
+        
+      </Switch>
+
+      {!changeNav && <Footer/> }
+    </>
   )
 }
 export default App
