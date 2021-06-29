@@ -9,8 +9,9 @@ import {
   Stack,
   Image
 } from '@chakra-ui/react'
-
+import ImageOne from '../../components/assets/img/bg1.jpg'
 import { FiExternalLink } from 'react-icons/fi'
+import './about.css'
 
 const CTA = () => {
   return (
@@ -18,14 +19,15 @@ const CTA = () => {
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={0}>
         <Flex bg='brand.400'>
           <Image
-            src='https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80'
+            src='https://images.unsplash.com/photo-1619229725896-1b2ca516a6d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80'
             alt='3 women looking at a laptop'
             fit='cover'
             w='full'
-            h={{ base: 64, md: 'full' }}
-            bg='gray.100'
+            h={{ base: 64, md: 'full', lg:'25rem'}}
+            m={'30px'}
+            mx={'20px'}
+            borderRadius='lg'
             loading='lazy'
-            opacity={0.4}
           />
         </Flex>
         <Flex
@@ -38,21 +40,23 @@ const CTA = () => {
         >
           <chakra.span
             color={useColorModeValue('brand.600', 'gray.300')}
-            fontSize='lg'
+            fontSize={{ base: '4xl', md: '4xl', lg: '6xl' }}
             textTransform='uppercase'
             fontWeight='extrabold'
+            className='abm'
           >
-            Award winning support
+            ABM
           </chakra.span>
           <chakra.h1
             mb={4}
-            fontSize={{ base: '4xl', md: '4xl', lg: '5xl' }}
+            fontSize={{ base: '24xl', md: '2xl', lg: '3xl' }}
             fontWeight='bold'
             color={useColorModeValue('brand.600', 'gray.300')}
             lineHeight='shorter'
             textShadow='2px 0 currentcolor'
+            className='pv2'
           >
-            We're here to help
+            We're here to do deliver the best music to you...
           </chakra.h1>
           <chakra.p
             pr={{ base: 0, lg: 16 }}
@@ -81,14 +85,13 @@ const CTA = () => {
           <chakra.h2
             fontSize={{ base: '3xl', sm: '4xl' }}
             fontWeight='extrabold'
-            lineHeight='shorter'
+            lineHeight='shorter'    
             color={useColorModeValue('white', 'gray.100')}
             mb={6}
           >
-            <chakra.span display='block'>Ready to dive in?</chakra.span>
             <chakra.span
               display='block'
-              color={useColorModeValue('white', 'gray.500')}
+              color={useColorModeValue('red', 'gray.500')}
             >
               Start your free trial today.
             </chakra.span>
@@ -96,7 +99,7 @@ const CTA = () => {
           <chakra.p
             mb={6}
             fontSize={{ base: 'lg', md: 'xl' }}
-            color={useColorModeValue('gray.100', 'gray.300')}
+            color={useColorModeValue('green', 'gray.300')}
           >
             Hellonext is a feature voting software where you can allow your
             users to vote on features, publish roadmap, and complete your
@@ -108,8 +111,7 @@ const CTA = () => {
             w='full'
             rounded='lg'
             shadow='2xl'
-            src='https://kutty.netlify.app/hero.jpg'
-            alt='Hellonext feedback boards software screenshot'
+            src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80'
           />
         </Box>
       </Flex>

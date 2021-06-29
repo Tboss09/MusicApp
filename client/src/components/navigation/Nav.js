@@ -41,7 +41,7 @@ export default function Gslr() {
             >
               <VisuallyHidden>AAM</VisuallyHidden>
             </chakra.a>
-            <chakra.h1 fontSize="xl" fontWeight="medium" ml="2" className="logo">
+            <chakra.h1 fontSize="35px" fontWeight="medium" ml="2" className="logo">
               ABM
             </chakra.h1>
           </Flex>

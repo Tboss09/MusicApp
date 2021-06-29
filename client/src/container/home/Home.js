@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Text, Box, Flex, useColorModeValue, Image } from '@chakra-ui/react'
 import { FiExternalLink } from 'react-icons/fi'
-import {chakra,SimpleGrid,Icon} from '@chakra-ui/react'
+import { chakra, SimpleGrid, Icon } from '@chakra-ui/react'
 
 const Component = () => {
   const slides = [
@@ -24,6 +24,9 @@ const Component = () => {
     {
       img:
         'https://images.pexels.com/photos/3124111/pexels-photo-3124111.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+    },
+    {
+      img: '../../components/assets/img/bg1.jpg'
     }
   ]
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -61,7 +64,12 @@ const Component = () => {
         justifyContent='center'
       >
         <Flex w='full' overflow='hidden'>
-          <Flex pos='relative' h='400px' w='full' {...carouselStyle}>
+          <Flex
+            pos='relative'
+            h={{ base: '300px', md: '350px', lg: '500px' }}
+            w='full'
+            {...carouselStyle}
+          >
             {slides.map((slide, sid) => (
               <Box key={`slide-${sid}`} flex='none' boxSize='full' shadow='md'>
                 <Text
@@ -71,16 +79,18 @@ const Component = () => {
                   pos='absolute'
                   top='0'
                   whiteSpace='nowrap'
-                >
-                  
-                </Text>
+                ></Text>
                 <Image src={slide.img} boxSize='full' backgroundSize='cover' />
               </Box>
             ))}
           </Flex>
         </Flex>
       </Flex>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={0}>
+      <SimpleGrid
+        columns={{ base: 1, md: 2 }}
+        spacing={0}
+        p={{ base: '1em', md: '2em', lg: '3em' }} 
+      >
         <Flex bg='brand.400'>
           <Image
             src='https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80'
@@ -90,7 +100,8 @@ const Component = () => {
             h={{ base: 64, md: 'full' }}
             bg='gray.100'
             loading='lazy'
-            opacity={0.4}
+            opacity={0.8}
+            shadow='xl'
           />
         </Flex>
         <Flex
@@ -113,7 +124,7 @@ const Component = () => {
             mb={4}
             fontSize={{ base: '4xl', md: '4xl', lg: '5xl' }}
             fontWeight='bold'
-            color={useColorModeValue('brand.600','dark.blue')}
+            color={useColorModeValue('brand.600', 'dark.blue')}
             lineHeight='shorter'
             textShadow='2px 0 currentcolor'
           >

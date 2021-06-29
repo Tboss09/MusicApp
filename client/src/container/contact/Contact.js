@@ -3,10 +3,10 @@ import '../contact/contact.css'
 
 const Contact = () => {
   return (
-      <div>           
-          <div className='w100 main mb5 mt5 ma2'>
-            <article class="br2 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw7 pa4 center">
-            <div className='box'>
+      <div className='box'>           
+          <div className='w100 main'>
+            <article class="br2 ba dark-gray shadow-4 article b--black-10 w-100 w-50-m w-25-l mw7 pa4 center">
+            <div>
                     <div class="measure">
                         <label htmlFor="name" className="f6 b db mb2">Name</label>
                         <input id="name" className="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="name-desc" />

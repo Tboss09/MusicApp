@@ -1,6 +1,8 @@
 
 import React from 'react'
 import ImageOne from '../../components/assets/img/bg1.jpg'
+import uniqid from 'uniqid'
+
 import {
   Box,
   HStack,
@@ -37,22 +39,26 @@ const Music = () => {
     // Grid layout for the Music showcase
 
     <SimpleGrid
-      columns={[1, 2,3,4]}
-      spacing={{ base: '70px',sm:'14px', md: '12px', lg: '35px' }}
-      mt='12'
-      maxW={{ base: '85%',sm:"96%", md: '95%', lg: '95%' }}
-      mx='auto'
+    columns ={[1,2,2,3]}
+    mt="24"
+    mb="32"
+    spacing={10}
+    w="95%"
+    mx="auto"
+    alignItems="center"
+    justifyContent="center"
     >
-      {/* Each Box is a music song card containing the name of the song, author ,play and download option */}
 {/* Arrays of music folders here */}
-      {dummyArrayForMusicLayout.map(musicBox => (
-        <Box   key={musicBox}>
-     <MusicBox image={ImageOne}  />
-      </Box>
+{dummyArrayForMusicLayout.map(user=>(
+     <MusicBox  image={ImageOne}  key ={uniqid()}/>
+))}
 
+{/* Music player */}
 
-      ))}
+{/* Music player */}
     </SimpleGrid>
+
+
   )
 }
 

@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Raleway&family=Share+Tech+Mono&display=swap');
 .slick-dots {
     bottom: 16px !important;
 }
-
+.logo{
+    font-family: 'share tech mono';
+}
 .HoverCardClass_Card__IrMgs {
     box-shadow: 0px 0px 0px 0px !important;
     border-radius: 0px !important;
     height:100% !important;
     margin: 0px !important;
+}
+.rhap_main-controls{
+    display:none !important;
 }

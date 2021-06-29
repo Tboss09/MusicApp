@@ -1,65 +1,96 @@
-import React from 'react'
-import { Box, Image, Icon, Flex, Text, Heading ,Button} from '@chakra-ui/react'
-import { HoverCard } from 'react-png-hovercard'
+import React from "react";
+import { chakra,Icon , Box, Image, Flex } from "@chakra-ui/react";
+import {FaPlay,FaPause} from'react-icons/fa'
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
-import { FaPlay } from 'react-icons/fa'
-const MusicBox = ({ image }) => {
+
+
+const Ma = () => {
+  const textInput = React.createRef();
+  const [play,setPlay] = React.useState(false)
+
+  function handlePlay () {
+   textInput.current.audio.current.play()
+  }
+  
+  
   return (
-    <Box h={{ base: '80', md: '80', lg: '96' }} bg='red' position='relative'>
-      <Box
-        as={HoverCard}
-        h='70%'
-        front={
-          <Box w='full'>
-            <Image
-              src={image}
-              w='full'
-              fallbackSrc='https://via.placeholder.com/150'
-              p='2'
-              borderRadius='0px'
-              objectFit='cover'
-            />
-          </Box>
-        }
-        back={
-          <Flex
-            align='center'
-            justify='center'
-            cursor='pointer'
-            w='full'
-            bg='blackAlpha.300'
-            h={{ base: '55%', md: '55%', lg: '45%' }}
-            m='2'
+    <
+    >
+      <Box position ="relative"
+        maxW="lg"
+        mx="auto"
+        shadow="lg"
+        rounded="md"
+      >
+        <Box px={4} py={2}>
+          <chakra.h1
+            color="black"
+            fontWeight="bold"
+            fontSize="3xl"
+            textTransform="uppercase"
           >
-            <Icon as={FaPlay} w='12' h='12' color='white' />
-          </Flex>
-        }
-        animationSpeed={200}
-        height={0}
-      />
-
-      {/* Name and author of Song */}
-      <Flex align="flex-start" justify ="flex-start" flexDir="column" position='absolute' bottom={{base:'0rem',md:"2rem",lg:"2rem"}} bg="yellow" h="32" w="full" p="2">
-        
-        <Box>
-          <Text fontSize='lg' as={Heading} fontWeight='500'>
-            Name of Music
-          </Text>
-
-          <Box>
-            <Text as='span'>Akosile Oluwatayo</Text>
-          </Box>
+            NIKE AIR
+          </chakra.h1>
+          <chakra.p
+            mt={1}
+            fontSize="sm"
+            color="black"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos
+            quidem sequi illum facere recusandae voluptatibus
+          </chakra.p>
         </Box>
 
-<Flex mt="2" w="full">
-  <Button colorScheme="blue" size="lg"  w="90%" mx="auto" >
-    Download
-  </Button>
-</Flex>
+        <Image
+          h={48}
+          w="full"
+          fit="cover"
+          mt={2}
+          src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80"
+          alt="NIKE AIR"
+        />
 
-      </Flex>
-    </Box>
-  )
-}
+        <Flex
+          alignItems="center"
+          justifyContent="space-between"
+          px={6}
+          py={3}
+          bg="gray.900"
+          roundedBottom="lg"
+        >
+          <chakra.h1 color="white" fontWeight="bold" fontSize="lg" onClick ={handlePlay}>
+            <Icon as ={!play ? FaPlay :FaPause }/>
+          </chakra.h1>
+          <chakra.button
+            px={4}
+            py={2}
+            bg="white"
+            fontSize="xs"
+            color="gray.900"
+            fontWeight="bold"
+            rounded="sm"
+            textTransform="uppercase"
+            _hover={{
+              bg: "gray.200",
+            }}
+            _focus={{
+              bg: "gray.400",
+            }}
+          >
+            Download
+          </chakra.button>
+        </Flex>
+        <Box as ={AudioPlayer} ref={textInput}  position ="absolute"  bottom ="16" autoPlay ={false} customVolumeControls={[]}  
+        stomAdditionalControls={[]} customAdditionalControls={[]}   showJumpControls={false}
+    src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+    onPlay={e => console.log("onPlay")}
+    // other props here
+  />
+      </Box>
+    </>
+  );
+};
 
-export default MusicBox
+export default Ma;
