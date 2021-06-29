@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Text, Box, Flex, useColorModeValue, Image } from '@chakra-ui/react'
 import { FiExternalLink } from 'react-icons/fi'
 import { chakra, SimpleGrid, Icon } from '@chakra-ui/react'
-
+import './home.css'
 const Component = () => {
   const slides = [
     {
@@ -66,7 +66,7 @@ const Component = () => {
         <Flex w='full' overflow='hidden'>
           <Flex
             pos='relative'
-            h={{ base: '300px', md: '350px', lg: '500px' }}
+            h={{ base: '320px', md: '350px', lg: '500px' }}
             w='full'
             {...carouselStyle}
           >

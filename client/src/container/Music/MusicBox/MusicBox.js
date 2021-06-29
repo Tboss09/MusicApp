@@ -3,7 +3,7 @@ import { chakra,Icon , Box, Image, Flex } from "@chakra-ui/react";
 import {FaPlay,FaPause} from'react-icons/fa'
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
-
+import './music.css'
 
 
 const Ma = () => {

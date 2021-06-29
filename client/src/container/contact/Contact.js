@@ -5,7 +5,7 @@ const Contact = () => {
   return (
       <div className='box'>           
           <div className='w100 main'>
-            <article class="br2 ba dark-gray shadow-4 article b--black-10 w-100 w-50-m w-25-l mw7 pa4 center">
+            <article class="br2 ba dark-gray shadow-4 article b--black-10 w-100 w-50-m w-25-l mw8 pa4 center">
             <div>
                     <div class="measure">
                         <label htmlFor="name" className="f6 b db mb2">Name</label>
