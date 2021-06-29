@@ -5,3 +5,8 @@ export const getAllMusicFiles = (req, res) => {
 export const getJustOneAudio = (req, res) => {
     res.json("got just one music file")
 }
+
+// Create new Music
+export const CreateNewMusic =  (req,res) =>{
+
+}

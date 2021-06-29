@@ -3,6 +3,7 @@ import mongoose from "mongoose"
 import cors from "cors"
 import dotenv from "dotenv"
 import route from "./routes/route.js"
+import PostRoute from "./routes/PostRoute.js"
 import MusicAppBackend from './Schema/Schema.js'
 
 // server initialisation
@@ -31,19 +32,12 @@ db.once('open', function () {
 
 
 
-app.get('/api/v1', route)
+app.use('/api/v1', route)
 
+// Post request
+app.use('/api/v1/', PostRoute)
 
-
-
-
-
-
-
-
-
-
-    app.listen(port, () => {
+app.listen(port, () => {
         console.log(`Server Listening at port ${port}`)
     })
 });

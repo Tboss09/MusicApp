@@ -13,8 +13,8 @@ const Song = new Schema({
 
 const admin = new Schema({
     emailAddress: String,
-    userName: String,
-    password: String,
+    userName: {type :String,default:"Admin"},
+    password: {type:String,default:"admin"},
     confirmPassword: String,
     songs: [Song]
 })
